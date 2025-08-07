@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club BW - Delhi</title>
+    <title>Best Party Place in Indirapuram | Food, Music & Dance at NV Clubstraunt</title>
+    <meta name="description" content="Experience the ultimate party, food, and dance destination in Niti Khand 1, Indirapuram, Ghaziabad. NV Clubstraunt—where great nights begin!">
+    <meta name="keywords" content="party place Indirapuram, best restaurant Ghaziabad, dance floor in Indirapuram, birthday party venue in Ghaziabad, corporate events Ghaziabad, NV Clubstraunt">
+    <meta property="og:title" content="Best Party Place in Indirapuram | NV Clubstraunt">
+    <meta property="og:description" content="Experience the ultimate party, food, and dance destination in Niti Khand 1, Indirapuram, Ghaziabad. NV Clubstraunt—where great nights begin!">
+    <meta property="og:type" content="website">
+    <meta name="geo.position" content="28.6429; 77.3734">
+    <meta name="geo.placename" content="Niti Khand 1, Indirapuram, Ghaziabad">
+    <meta name="geo.region" content="IN-UP">
     <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://www.nvclubstraunt.com/">
 </head>
 <body>
+    <!-- Mobile Drawer -->
+    <div id="drawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="#" class="drawer-logo">
+                <img src="assets/img/logo/NVlogo.png" alt="NV Logo" class="nv-logo nv-logo-animate">
+            </a>
+            <button onclick="toggleDrawer()" class="drawer-close">&times;</button>
+        </div>
+        <ul class="drawer-links">
+            <li><a href="#whatsnew" class="drawer-link"><span>🎉</span>What's New</a></li>
+            <li><a href="#gallery" class="drawer-link"><span>🖼️</span>Gallery</a></li>
+            <li><a href="#book" class="drawer-link"><span>📅</span>Book Now</a></li>
+            <li><a href="#contact" class="drawer-link"><span>📞</span>Contact</a></li>
+            <li><a href="#whatsnew" class="drawer-link"><span>ℹ️</span>About</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay for drawer -->
+    <div id="overlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
+
     <header>
         <nav class="navbar">
             <div class="nav-left">
@@ -15,7 +44,7 @@
                 </a>
             </div>
             <div class="nav-center">
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button onclick="toggleDrawer()" class="nav-toggle" aria-label="Toggle navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -51,23 +80,30 @@
     </header>
     <div class="hero-slider">
         <div class="slider">
-            <img src="assets/img/image/Slider image 1.png" alt="Slider 1" class="slide active">
-            <img src="assets/img/image/Slider image 2.png" alt="Slider 2" class="slide">
-            <img src="assets/img/image/Slider image 3.png" alt="Slider 3" class="slide">
+            <img src="assets/img/Slider/Slider1.png" alt="Slider 1" class="slide active">
+            <img src="assets/img/Slider/Slider2.png" alt="Slider 2" class="slide">
+            <img src="assets/img/Slider/Slider3.png" alt="Slider 3" class="slide">
+            <img src="assets/img/Slider/Slider4.png" alt="Slider 4" class="slide">
+            <img src="assets/img/Slider/Slider5.png" alt="Slider 5" class="slide">
+            <img src="assets/img/Slider/Slider6.png" alt="Slider 6" class="slide">
             <div class="slider-overlay">
-                <h1 class="slider-title">Welcome to <span class="nv-highlight">NV Clubstraunt</span></h1>
-                <a href="#book" class="slider-btn">Book Now</a>
+                <h1 class="slider-title">🎉 Best Party Destination in Indirapuram – Food, Dance & Pure Fun at <span class="nv-highlight">NV Clubstraunt!</span></h1>
+                <p class="hero-description">Experience the ultimate party and dining destination in Niti Khand 1, Indirapuram</p>
+                <a href="#book" class="slider-btn">Book Your Party Now</a>
             </div>
         </div>
         <div class="slider-controls">
             <span class="slider-dot active"></span>
             <span class="slider-dot"></span>
             <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
         </div>
     </div>
     <!-- Sections after slider -->
     <section class="occasions">
-        <h3 style="text-align:center;">Celebrate With Us</h3>
+        <h3 style="text-align:center; color: seashell;">Celebrate With Us</h3>
         <div class="occasions-grid">
             <div class="occasion-card">
                 <img src="assets/img/image/birthday.jpg" alt="Birthday Celebration">
@@ -90,9 +126,43 @@
         </div>
     </section>
     <section class="section" id="whatsnew">
-        <h3 style="text-align:center;">What's New</h3>
-        <p style="text-align:center;">Check out the latest updates and offers at NV Club!</p>
-        <!-- Add more update items here as needed -->
+        <div class="welcome-content">
+            <h2 class="section-title">Welcome to Your Ultimate Party Destination in Ghaziabad</h2>
+            
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="feature-icon">📍</i>
+                    <h3>Prime Location</h3>
+                    <p>Conveniently located in Indirapuram, Ghaziabad</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🎵</i>
+                    <h3>Dance Floor</h3>
+                    <p>Live DJ nights and spacious dance area</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🍽️</i>
+                    <h3>Premium Dining</h3>
+                    <p>Multi-cuisine menu with exotic drinks</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">💝</i>
+                    <h3>Perfect for Events</h3>
+                    <p>Ideal for birthdays, anniversaries & corporate events</p>
+                </div>
+            </div>
+
+            <div class="seo-tags">
+                <h4>Popular Searches:</h4>
+                <ul class="tag-list">
+                    <li>Best party place in Ghaziabad</li>
+                    <li>Restaurants with dance floor in Indirapuram</li>
+                    <li>Birthday celebration venue Niti Khand 1</li>
+                    <li>Top clubs and nightlife in Ghaziabad</li>
+                </ul>
+            </div>
+        </div>
     </section>
     <!-- Small occasion sections -->
     <section class="mini-occasions">
@@ -128,60 +198,169 @@
             </div>
         </div>
     </section>
-    <!-- Party Visuals section -->
-    <section class="party-visuals">
-        <h3>Party Visuals</h3>
-        <div class="visuals-grid">
-            <div class="visual-item">
-                <img src="assets/img/image/3.png" alt="Dancing People" class="visual-img">
-            </div>
-            <div class="visual-item">
-                <img src="assets/img/image/6.png" alt="Food Table" class="visual-img">
-            </div>
-            <div class="visual-item">
-                <img src="assets/img/image/8.png" alt="Dance Floor" class="visual-img">
-            </div>
-            <div class="visual-item">
-                <img src="assets/img/image/9.png" alt="Celebration" class="visual-img">
-            </div>
-        </div>
-        <div style="text-align:center; margin-top:32px;">
-            <button class="popup-book-btn" onclick="document.getElementById('popupForm').style.display='block'">Book Now</button>
+    <!-- Gallery section -->
+    <section class="gallery-section" id="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="assets/img/Gallery/Img1.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img2.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img3.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img4.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img5.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img6.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img7.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img8.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img9.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img10.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img11.png" alt="Gallery Image"></div>
+            <div class="gallery-item"><img src="assets/img/Gallery/Img12.png" alt="Gallery Image"></div>
+           
         </div>
     </section>
     <!-- Food Section -->
     <section class="food-section">
-        <h3 style="text-align:center;">Food Highlights</h3>
-        <div class="food-grid">
-            <div class="food-item">
-                <img src="assets/img/image/10.png" alt="Starter Platter" class="visual-img">
-                <span><img src="assets/img/logo/food-icon.png" alt="Food Icon" style="width:32px;vertical-align:middle;"> Starters</span>
+        <h3 style="text-align:center; color: rgb(255, 193, 112);">Food Highlights</h3>
+        
+        <!-- Starter Platter Section -->
+        <div class="menu-category">
+            <h4 style="color: seashell;">Starter Platter</h4>
+            <div class="food-grid">
+                <div class="food-item">
+                    <img src="assets/img/Starter Platter Image/Starter Platter 1.png" alt="Starter">
+                    <span>Grilled Appetizers</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Starter Platter Image/Starter Platter 2.png" alt="Starter">
+                    <span>Special Kebabs</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Starter Platter Image/Starter Platter 3.png" alt="Starter">
+                    <span>Tandoori Mix</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Starter Platter Image/Starter Platter 4.png" alt="Starter">
+                    <span>Seafood Platter</span>
+                </div>
             </div>
-            <div class="food-item">
-                <img src="assets/img/image/11.png" alt="Main Course" class="visual-img">
-                <span><img src="assets/img/logo/food-icon.png" alt="Food Icon" style="width:32px;vertical-align:middle;"> Main Course</span>
+        </div>
+
+        <!-- Main Course Section -->
+        <div class="menu-category">
+            <h4 style="color: seashell;">Main Course</h4>
+            <div class="food-grid">
+                <div class="food-item">
+                    <img src="assets/img/Main Course Image/Main Course 1.png" alt="Main Course">
+                    <span>Signature Dishes</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Main Course Image/Main Course 2.png" alt="Main Course">
+                    <span>Chef's Special</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Main Course Image/Main Course 3.png" alt="Main Course">
+                    <span>Royal Biryani</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Main Course Image/Main Course 4.png" alt="Main Course">
+                    <span>Curry Selection</span>
+                </div>
             </div>
-            <div class="food-item">
-                <img src="assets/img/image/12.png" alt="Desserts" class="visual-img">
-                <span><img src="assets/img/logo/food-icon.png" alt="Food Icon" style="width:32px;vertical-align:middle;"> Desserts</span>
+        </div>
+
+        <!-- Desserts Section -->
+        <div class="menu-category">
+            <h4 style="color: seashell;">Desserts</h4>
+            <div class="food-grid">
+                <div class="food-item">
+                    <img src="assets/img/Desserts Image/Desserts 1.png" alt="Dessert">
+                    <span>Sweet Delights</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Desserts Image/Desserts 2.png" alt="Dessert">
+                    <span>Ice Cream Selection</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Desserts Image/Desserts 3.png" alt="Dessert">
+                    <span>Traditional Desserts</span>
+                </div>
+                <div class="food-item">
+                    <img src="assets/img/Desserts Image/Desserts 4.png" alt="Dessert">
+                    <span>Premium Desserts</span>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Drink Section -->
+
+    <!-- Drinks Section -->
     <section class="drink-section">
-        <h3 style="text-align:center;">Drinks & Beverages</h3>
-        <div class="drink-grid">
-            <div class="drink-item">
-                <img src="assets/img/image/13.png" alt="Cocktails" class="visual-img">
-                <span><img src="assets/img/logo/drink-icon.png" alt="Drink Icon" style="width:32px;vertical-align:middle;"> Cocktails</span>
+        <h3 style="text-align:center;color: seashell;">Drinks & Beverages</h3>
+
+        <!-- Cocktails Section -->
+        <div class="menu-category">
+            <h4 style="color: seashell;">Cocktails</h4>
+            <div class="drink-grid">
+                <div class="drink-item">
+                    <img src="assets/img/Cocktails Image/Cocktails 1.png" alt="Cocktail">
+                    <span>Signature Cocktails</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Cocktails Image/Cocktails 2.png" alt="Cocktail">
+                    <span>Classic Cocktails</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Cocktails Image/Cocktails 3.png" alt="Cocktail">
+                    <span>Premium Mix</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Cocktails Image/Cocktails 4.png" alt="Cocktail">
+                    <span>House Specials</span>
+                </div>
             </div>
-            <div class="drink-item">
-                <img src="assets/img/image/14.png" alt="Mocktails" class="visual-img">
-                <span><img src="assets/img/logo/drink-icon.png" alt="Drink Icon" style="width:32px;vertical-align:middle;"> Mocktails</span>
+        </div>
+
+        <!-- Mocktails Section -->
+        <div class="menu-category">
+            <h4 style="color: seashell;">Mocktails</h4>
+            <div class="drink-grid">
+                <div class="drink-item">
+                    <img src="assets/img/Mocktails/Mocktails1.png" alt="Mocktail">
+                    <span>Premium Mocktails</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Mocktails/Mocktails 2.png" alt="Mocktail">
+                    <span>Fruit Mocktails</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Mocktails/Mocktails 3.png" alt="Mocktail">
+                    <span>Virgin Specials</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Mocktails/Mocktails 4.png" alt="Mocktail">
+                    <span>Refreshing Blends</span>
+                </div>
             </div>
-            <div class="drink-item">
-                <img src="assets/img/image/15.png" alt="Wine" class="visual-img">
-                <span><img src="assets/img/logo/drink-icon.png" alt="Drink Icon" style="width:32px;vertical-align:middle;"> Wine</span>
+        </div>
+
+        <!-- Wine Section -->
+        <div class="menu-category">
+            <h4 style="color: seashell;">Wine Selection</h4>
+            <div class="drink-grid">
+                <div class="drink-item">
+                    <img src="assets/img/Wine/Wine 1.png" alt="Wine">
+                    <span>Red Wine</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Wine/Wine 2.png" alt="Wine">
+                    <span>White Wine</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Wine/Wine 3.png" alt="Wine">
+                    <span>Sparkling Wine</span>
+                </div>
+                <div class="drink-item">
+                    <img src="assets/img/Wine/Wine 4.png" alt="Wine">
+                    <span>House Wine</span>
+                </div>
             </div>
         </div>
     </section>
@@ -209,10 +388,10 @@
     </div>
     <footer>
         <div class="footer-main">
-            <span>All rights reserved @BW Club 2025</span>
+            <span>All rights reserved NV Clubstraunt 2025</span>
             <span class="developer">
-                <img src="assets/img/logo/developer.png" alt="Developer" class="dev-icon">
-                Developed by <a href="https://your-portfolio-link.com" target="_blank">Your Name</a>
+                <img src="assets/img/logo/Aditya.png" alt="Developer" class="dev-icon">
+                Developed by <a href="https://aditya-k-rai.github.io/P-Website/" target="_blank">Aditya Rai</a>
             </span>
         </div>
     </footer>
@@ -220,8 +399,53 @@
         <img src="assets/img/logo/Whatsapp.png" alt="WhatsApp" style="width:36px;height:36px;">
     </div>
     <script src="script.js"></script> 
-   
-   
+    <script>
+        function toggleFoodItems() {
+            const hiddenItems = document.querySelectorAll('#foodGrid .food-item.hidden');
+            const btn = document.querySelector('.food-section .see-more-btn');
+            
+            hiddenItems.forEach(item => {
+                if (item.style.display === 'none' || !item.style.display) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                    btn.textContent = 'See Less';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                    btn.textContent = 'See More';
+                }
+            });
+        }
+
+        function toggleDrinkItems() {
+            const hiddenItems = document.querySelectorAll('#drinkGrid .drink-item.hidden');
+            const btn = document.querySelector('.drink-section .see-more-btn');
+            
+            hiddenItems.forEach(item => {
+                if (item.style.display === 'none' || !item.style.display) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                    btn.textContent = 'See Less';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                    btn.textContent = 'See More';
+                }
+            });
+        }
+    </script>
 </body>
 
 

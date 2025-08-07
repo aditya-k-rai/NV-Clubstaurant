@@ -1,5 +1,21 @@
-// WhatsApp floating button logic
+// Mobile Navigation
+function toggleDrawer() {
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('overlay');
+    drawer.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
+}
+
+// Initialize all functionality when DOM is loaded
 window.addEventListener('DOMContentLoaded', function() {
+    // Close drawer when clicking a link
+    document.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', () => {
+            toggleDrawer();
+        });
+    });
+
     // WhatsApp button
     var btn = document.querySelector('.whatsapp-btn');
     if(btn) {
@@ -29,41 +45,84 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Slider logic: slide left-to-right, full width, random interval 2-3s, no delay between slides
+    // Slider functionality
     var slides = document.querySelectorAll('.slide');
     var dots = document.querySelectorAll('.slider-dot');
-    var slider = document.querySelector('.slider');
     var current = 0;
     var intervalId;
+
     function showSlide(idx) {
-        slides.forEach(function(slide, i) {
-            slide.classList.toggle('active', i === idx);
-            slide.style.transform = 'translateX(' + ((i - idx) * 100) + 'vw)';
-        });
-        dots.forEach(function(dot, i) {
-            dot.classList.toggle('active', i === idx);
-        });
+        // Remove prev class from all slides
+        slides.forEach(slide => slide.classList.remove('prev'));
+        
+        // Add prev class to current slide
+        slides[current].classList.add('prev');
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        
         current = idx;
+        
+        // Add active class to new current slide
+        slides[current].classList.add('active');
+        slides[current].classList.remove('prev');
+        dots[current].classList.add('active');
     }
+
     function nextSlide() {
         var next = (current + 1) % slides.length;
         showSlide(next);
-        intervalId = setTimeout(nextSlide, 2000 + Math.random() * 1000);
+        intervalId = setTimeout(nextSlide, 5000);
     }
+
     if(slides.length > 0 && dots.length > 0) {
-        slides.forEach(function(slide, i) {
-            slide.style.transform = 'translateX(' + (i * 100) + 'vw)';
-        });
+        // Add click handlers for dots
         dots.forEach(function(dot, i) {
             dot.addEventListener('click', function() {
                 clearTimeout(intervalId);
                 showSlide(i);
-                intervalId = setTimeout(nextSlide, 2000 + Math.random() * 1000);
+                intervalId = setTimeout(nextSlide, 5000);
             });
         });
-        showSlide(0);
-        intervalId = setTimeout(nextSlide, 2000 + Math.random() * 1000);
+
+        // Start automatic sliding
+        intervalId = setTimeout(nextSlide, 5000);
     }
+
+    // Form popup functionality
+    function showBookingForm() {
+        document.getElementById('popupForm').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when form is open
+    }
+
+    function closeBookingForm() {
+        document.getElementById('popupForm').style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    // Add click handlers to all booking buttons
+    const bookButtons = document.querySelectorAll('.book-btn, .popup-book-btn, .slider-btn');
+    bookButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            showBookingForm();
+        });
+    });
+
+    // Close form when clicking on close button or outside the form
+    document.querySelector('.popup-close').addEventListener('click', closeBookingForm);
+    document.querySelector('.popup-form-bg').addEventListener('click', (e) => {
+        if (e.target.classList.contains('popup-form-bg')) {
+            closeBookingForm();
+        }
+    });
+
+    // Handle form submission
+    document.querySelector('.popup-book-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Booking request submitted successfully!');
+        closeBookingForm();
+    });
 });
 //look at fixes in the Pen https://codepen.io/ghaste/pen/OJqLbvg
 //for adding mouse trail to a page that scrolls beyond the viewport, as would be the case with most websites - lol
