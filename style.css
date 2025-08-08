@@ -54,6 +54,33 @@
     height: 200px;
 }
 
+/* Smartphone styles */
+@media screen and (max-width: 768px) {
+    .occasion-card {
+        height: 288px; /* Further increased by 20% from 240px */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .occasion-card h4 {
+        font-size: 1.3rem;
+        margin: 1rem 0.8rem 0.5rem;
+    }
+    
+    .occasion-card p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+    
+    .occasions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
 .occasion-card img {
     width: 100%;
     height: 250px;
@@ -187,8 +214,8 @@
     }
 
     .occasion-card {
-        height: 160px;
-        max-height: 160px;
+        height: 200px;
+        max-height: 200px;
     }
 
     .occasion-card img {

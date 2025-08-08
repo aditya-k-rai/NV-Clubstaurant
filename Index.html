@@ -25,6 +25,40 @@
             .food-item:hover {
                 transform: translateY(-5px);
             }
+            
+            /* Responsive styles for smartphones */
+            @media screen and (max-width: 768px) {
+                .slider-overlay {
+                    width: 80%;
+                    padding: 1rem;
+                    transform: scale(0.8);
+                }
+                .slider-title {
+                    font-size: 1.4em;
+                }
+                .slider-btn {
+                    padding: 0.8rem 1.6rem;
+                    font-size: 0.9em;
+                }
+                .whatsapp-btn {
+                    bottom: 20px;
+                    right: 20px;
+                    z-index: 1000;
+                    position: fixed;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: #25D366;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .whatsapp-btn img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
         </style>
         
         <!-- Starter Platter Section -->raunt</title>
@@ -51,7 +85,7 @@
         <ul class="drawer-links">
             <li><a href="#whatsnew" class="drawer-link"><span>🎉</span>What's New</a></li>
             <li><a href="#gallery" class="drawer-link"><span>🖼️</span>Gallery</a></li>
-            <li><a href="#book" class="drawer-link"><span>📅</span>Book Now</a></li>
+            <li><a href="#" onclick="document.getElementById('popupForm').style.display='block';toggleDrawer();return false;" class="drawer-link"><span>📅</span>Book Now</a></li>
             <li><a href="#contact" class="drawer-link"><span>📞</span>Contact</a></li>
             <li><a href="#whatsnew" class="drawer-link"><span>ℹ️</span>About</a></li>
         </ul>
@@ -76,7 +110,7 @@
                 <ul class="nav-links">
                     <li><a href="#whatsnew">What's New</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#book">Book Now</a></li>
+                    <li><a href="#" onclick="document.getElementById('popupForm').style.display='block';return false;">Book Now</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#about">About</a></li>
                 </ul>
@@ -112,7 +146,7 @@
             <img src="assets/img/Slider/Slider6.png" alt="Slider 6" class="slide">
             <div class="slider-overlay">
                 <h1 class="slider-title">🎉 Best Party Destination in Indirapuram – Food, Dance & Pure Fun at <span class="nv-highlight">NV Clubstraunt!</span></h1>
-                <p class="hero-description">Experience the ultimate party and dining destination in Niti Khand 1, Indirapuram</p>
+                
                 <a href="#book" class="slider-btn">Book Your Party Now</a>
             </div>
         </div>
@@ -130,19 +164,19 @@
         <h3 style="text-align:center; color: seashell;">Celebrate With Us</h3>
         <div class="occasions-grid">
             <div class="occasion-card">
-                <img src="assets/img/image/birthday.jpg" alt="Birthday Celebration">
+
                 <h4>Birthday Celebrations</h4>
                 <p>Make your birthday extra special with our custom party packages, cake arrangements, and dedicated service.</p>
                 <a href="#" class="book-btn" onclick="document.getElementById('popupForm').style.display='block';return false;">Book Now</a>
             </div>
             <div class="occasion-card">
-                <img src="assets/img/image/corporate.jpg" alt="Corporate Events">
+                
                 <h4>Corporate Events</h4>
                 <p>Perfect venue for team meetings, office parties, and corporate celebrations with state-of-the-art facilities.</p>
                 <a href="#" class="book-btn" onclick="document.getElementById('popupForm').style.display='block';return false;">Book Now</a>
             </div>
             <div class="occasion-card">
-                <img src="assets/img/image/private.jpg" alt="Private Parties">
+                
                 <h4>Private Parties</h4>
                 <p>Host your special occasions, anniversaries, or private gatherings in our exclusive party spaces.</p>
                 <a href="#" class="book-btn" onclick="document.getElementById('popupForm').style.display='block';return false;">Book Now</a>
@@ -419,9 +453,46 @@
             </span>
         </div>
     </footer>
-    <div class="whatsapp-btn" title="Chat on WhatsApp">
-        <img src="assets/img/logo/Whatsapp.png" alt="WhatsApp" style="width:36px;height:36px;">
-    </div>
+    <style>
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background-color: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+        .whatsapp-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        @media screen and (max-width: 768px) {
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .whatsapp-btn img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+    <a href="https://wa.me/919999999999" class="whatsapp-btn" title="Chat on WhatsApp" target="_blank">
+        <img src="assets/img/logo/Whatsapp.png" alt="WhatsApp">
+    </a>
     <script src="script.js"></script> 
     <script>
         function toggleFoodItems() {
