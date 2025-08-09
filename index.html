@@ -30,15 +30,16 @@
             @media screen and (max-width: 768px) {
                 .slider-overlay {
                     width: 80%;
-                    padding: 1rem;
-                    transform: scale(0.8);
+                    padding: 0.8rem;
+                    transform: scale(0.48); /* Reduced by additional 20% (from 0.6 to 0.48) */
+                    transform-origin: center center;
                 }
                 .slider-title {
-                    font-size: 1.4em;
+                    font-size: 1em; /* Further reduced font size */
                 }
                 .slider-btn {
-                    padding: 0.8rem 1.6rem;
-                    font-size: 0.9em;
+                    padding: 0.5rem 1.2rem; /* Further reduced padding */
+                    font-size: 0.75em; /* Further reduced font size */
                 }
                 .whatsapp-btn {
                     bottom: 20px;
@@ -57,6 +58,23 @@
                 .whatsapp-btn img {
                     width: 28px;
                     height: 28px;
+                }
+            }
+
+            /* Add tablet-specific adjustments */
+            @media screen and (min-width: 769px) and (max-width: 1024px) {
+                .slider-overlay {
+                    width: 85%;
+                    padding: 1rem;
+                    transform: scale(0.7); /* 30% smaller for tablets */
+                    transform-origin: center center;
+                }
+                .slider-title {
+                    font-size: 1.3em;
+                }
+                .slider-btn {
+                    padding: 0.7rem 1.5rem;
+                    font-size: 0.9em;
                 }
             }
         </style>
@@ -124,14 +142,7 @@
                     <span class="front"><a href="https://instagram.com/clubbw/" target="_blank"><img src="assets/img/logo/instagram.png" alt="Instagram" class="nav-icon"></a></span>
                     <span class="back"><a href="https://instagram.com/clubbw/" target="_blank"><img src="assets/img/logo/instagram.png" alt="Instagram" class="nav-icon"></a></span>
                 </span></span>
-                <span class="flip-container"><span class="flipper">
-                    <span class="front"><a href="https://www.swiggy.com/" target="_blank"><img src="assets/img/logo/swiggy.png" alt="Swiggy" class="nav-icon"></a></span>
-                    <span class="back"><a href="https://www.swiggy.com/" target="_blank"><img src="assets/img/logo/swiggy.png" alt="Swiggy" class="nav-icon"></a></span>
-                </span></span>
-                <span class="flip-container"><span class="flipper">
-                    <span class="front"><a href="https://www.zomato.com/" target="_blank"><img src="assets/img/logo/zomato.png" alt="Zomato" class="nav-icon"></a></span>
-                    <span class="back"><a href="https://www.zomato.com/" target="_blank"><img src="assets/img/logo/zomato.png" alt="Zomato" class="nav-icon"></a></span>
-                </span></span>
+                
                  <a href="https://goo.gl/maps/xyz" target="_blank"><img src="assets/img/logo/Gmap.png" alt="Google Map" class="nav-icon"></a>
             </div>
         </nav>
@@ -491,7 +502,7 @@
         }
     </style>
     <a href="https://wa.me/919999999999" class="whatsapp-btn" title="Chat on WhatsApp" target="_blank">
-        <img src="assets/img/logo/Whatsapp.png" alt="WhatsApp">
+        <img src="assets/img/logo/whatsapp.png" alt="WhatsApp">
     </a>
     <script src="script.js"></script> 
     <script>
